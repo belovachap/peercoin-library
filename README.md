@@ -5,3 +5,9 @@
 (Early engineers trying not to lose all the important ideas.)
 
 By O. Von Corven [Public domain], <a href="https://commons.wikimedia.org/wiki/File%3AAncientlibraryalex.jpg">via Wikimedia Commons</a>
+
+## Setup
+
+Trying out Python 3 + Kivy for science and adventure :)
+
+It's likely easiest to install Kivy from a PPA: https://kivy.org/docs/installation/installation-linux.html
