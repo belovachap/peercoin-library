@@ -11,3 +11,7 @@ By O. Von Corven [Public domain], <a href="https://commons.wikimedia.org/wiki/Fi
 Trying out Python 3 + Kivy for science and adventure :)
 
 It's likely easiest to install Kivy from a PPA: https://kivy.org/docs/installation/installation-linux.html
+
+## Running
+
+I've just been doing `$ python3 library.py`.

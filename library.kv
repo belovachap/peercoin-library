@@ -1,0 +1,18 @@
+#:kivy 1.9.1
+
+<LibraryBrowser>:
+
+    size_hint: 1.0, 1.0
+    orientation: "horizontal"
+
+    card_catalog: card_catalog
+    media_viewer: media_viewer
+
+    CardCatalog:
+        id: card_catalog
+        size_hint: 0.3, 1.0
+
+    MediaViewer:
+        id: media_viewer
+        size_hint: 0.7, 1.0
+        readonly: True
