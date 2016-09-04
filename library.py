@@ -3,6 +3,8 @@ https://en.wikipedia.org/wiki/Library
 https://en.wikipedia.org/wiki/Library_catalog
 """
 
+import codecs
+
 from kivy.adapters.listadapter import ListAdapter
 from kivy.app import App
 from kivy.properties import ObjectProperty
@@ -10,12 +12,16 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.listview import ListItemButton, ListView
 from kivy.uix.textinput import TextInput
 
+from peercoin import call_peercoin_rpc
+
+
+HEX_DECODER = codecs.getdecoder("hex_codec")
 
 BOOKS = [
     {
         "title": "Alice's Adventures in Wonderland",
         "author": "Lewis Carroll",
-        "txid": "3154d03bcc1f8fbfd89f2c3672567791187c95ba97d55ca05eca2ab4f40c3430",
+        "transaction_id": "3154d03bcc1f8fbfd89f2c3672567791187c95ba97d55ca05eca2ab4f40c3430",
     },
 ]
 
@@ -42,6 +48,16 @@ class CardCatalog(ListView):
         self.adapter = list_adapter
 
 
+def get_book_text_at_transaction_id(transaction_id):
+    '''Returns a string of the book text stored at the passed transaction id.
+
+    Raises NoBookFoundError if a book cannot be extracted.
+    '''
+    result = call_peercoin_rpc('getrawtransaction', transaction_id)
+
+    return HEX_DECODER(result)[0]
+
+
 class MediaViewer(TextInput):
 
     PLEASE_SELECT_MESSAGE = "Please select a book from the card catalog."
@@ -51,13 +67,19 @@ class MediaViewer(TextInput):
         self.text = self.PLEASE_SELECT_MESSAGE
 
     def book_changed(self, list_adapter):
-
+        'Updates Media Veiwer with selected book details and text.'
         if len(list_adapter.selection) == 0:
             self.text = self.PLEASE_SELECT_MESSAGE
             return
 
         book = BOOKS[list_adapter.selection[0].index]
-        self.text = "{0}\nby {1}\nin tx {2}".format(book["title"], book["author"], book["txid"])
+        self.text = "{0}\nby {1}\nin peercoin transaction {2}\n\n{3}".format(
+            book["title"],
+            book["author"],
+            book["transaction_id"],
+            get_book_text_at_transaction_id(book["transaction_id"])
+        )
+        self.cursor = (0, 0) # Scroll back to the top of the text box
 
 
 class LibraryBrowser(BoxLayout):
