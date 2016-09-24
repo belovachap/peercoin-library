@@ -23,6 +23,16 @@ BOOKS = [
         "author": "Lewis Carroll",
         "transaction_id": "3154d03bcc1f8fbfd89f2c3672567791187c95ba97d55ca05eca2ab4f40c3430",
     },
+    {
+        "title": "Romeo and Juliet",
+        "author": "William Shakespeare",
+        "transaction_id": "f40b4c7e97f2e83d1923481c19aed2f6ccaee470c636f7857dc4c970113df204",
+    },
+    {
+        "title": "Through the Looking-Glass",
+        "author": "Lewis Carroll",
+        "transaction_id": "0a440999bafedbdf0e3bdc52f6bdb8caf9634cb38cfef84c8fc2a8ad3f853059",
+    },
 ]
 
 
