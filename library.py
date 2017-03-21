@@ -24,6 +24,11 @@ BOOKS = [
         "transaction_id": "3154d03bcc1f8fbfd89f2c3672567791187c95ba97d55ca05eca2ab4f40c3430",
     },
     {
+        "title": "The Narrative of the Life of Frederick Douglass",
+        "author": "Frederick Douglass",
+        "transaction_id": "7c126ee20c5cdc4c8717fe00aa953c402c19b0e3b8a4adac5b848723960a2e4e",
+    },
+    {
         "title": "Romeo and Juliet",
         "author": "William Shakespeare",
         "transaction_id": "f40b4c7e97f2e83d1923481c19aed2f6ccaee470c636f7857dc4c970113df204",
