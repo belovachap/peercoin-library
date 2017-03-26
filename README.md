@@ -1,5 +1,7 @@
 # The Great Library of Peercoin
 
+[![tip for next commit](https://peer4commit.com/projects/195.svg)](https://peer4commit.com/projects/195)
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Ancientlibraryalex.jpg" width="512">
 
 (Early engineers trying not to lose all the important ideas.)
