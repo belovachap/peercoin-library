@@ -1,19 +1,16 @@
-# The Great Library of Peercoin
+# Peercoin Library
 
 [![tip for next commit](https://peer4commit.com/projects/195.svg)](https://peer4commit.com/projects/195)
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Ancientlibraryalex.jpg" width="512">
+An open source online library built on top of books stored in the Peercoin blockchain.
 
-(Early engineers trying not to lose all the important ideas.)
+This repo houses the backend ETL process ("the curator") and API ("the librarian").
 
-By O. Von Corven [Public domain], <a href="https://commons.wikimedia.org/wiki/File%3AAncientlibraryalex.jpg">via Wikimedia Commons</a>
+## Documentation
 
-## Setup
+Tutorials, Guides and References can be found in the GitHub Wiki: https://github.com/belovachap/peercoin-library/wiki
 
-Trying out Python 3 + Kivy for science and adventure :)
+## Warning
 
-It's likely easiest to install Kivy from a PPA: https://kivy.org/docs/installation/installation-linux.html
+"under development" :)
 
-## Running
-
-I've just been doing `$ python3 library.py`.
